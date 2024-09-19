@@ -48,9 +48,7 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
     fullname: shipping.fullname || profile.fullname || '',
     email: shipping.email || profile.email || '',
     address: shipping.address || profile.address || '',
-    mobile: {
-      countryCode: '27'
-    },
+    mobile: shipping.mobile || profile.mobile,
     isInternational: shipping.isInternational || false,
     isDone: shipping.isDone || false
   };
