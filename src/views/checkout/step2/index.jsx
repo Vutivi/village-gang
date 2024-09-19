@@ -30,8 +30,8 @@ const FormSchema = Yup.object().shape({
     .shape({
       country: Yup.string(),
       countryCode: Yup.string(),
-      dialCode: Yup.string().required('Mobile number is required'),
-      value: Yup.string().required('Mobile number is required')
+      dialCode: Yup.string(),
+      value: Yup.string()
     }),
   isInternational: Yup.boolean(),
   isDone: Yup.boolean()
