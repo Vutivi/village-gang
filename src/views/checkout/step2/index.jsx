@@ -80,6 +80,7 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
           >
             {() => (
               <Form>
+                <ShippingForm />
                 <br />
                 {/*  ---- TOTAL --------- */}
                 <ShippingTotal subtotal={subtotal} />
