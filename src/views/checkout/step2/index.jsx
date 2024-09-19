@@ -48,7 +48,9 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
     fullname: shipping.fullname || profile.fullname || '',
     email: shipping.email || profile.email || '',
     address: shipping.address || profile.address || '',
-    mobile: shipping.mobile || profile.mobile,
+    mobile: shipping.mobile || profile.mobile || {
+      value: '27112121211'
+    },
     isInternational: shipping.isInternational || false,
     isDone: shipping.isDone || false
   };
