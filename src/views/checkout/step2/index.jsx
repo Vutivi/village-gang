@@ -44,14 +44,14 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
   const dispatch = useDispatch();
   const history = useHistory();
 
-  // const initFormikValues = {
-  //   fullname: shipping?.fullname || profile?.fullname || '',
-  //   email: shipping?.email || profile?.email || '',
-  //   address: shipping?.address || profile?.address || '',
-  //   mobile: shipping?.mobile || profile?.mobile || {},
-  //   isInternational: shipping?.isInternational || false,
-  //   isDone: shipping?.isDone || false
-  // };
+  const initFormikValues = {
+    fullname: '',
+    email: '',
+    address: '',
+    mobile: {},
+    isInternational: false,
+    isDone: false
+  };
 
   const onSubmitForm = (form) => {
     dispatch(setShippingDetails({
