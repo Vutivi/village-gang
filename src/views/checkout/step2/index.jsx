@@ -72,6 +72,41 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
         <StepTracker current={2} />
         <div className="checkout-step-2">
           <h3 className="text-center">Shipping Details</h3>
+          <Formik
+            initialValues={initFormikValues}
+            validateOnChange
+            validationSchema={FormSchema}
+            onSubmit={onSubmitForm}
+          >
+            {() => (
+              <Form>
+                <br />
+                {/*  ---- TOTAL --------- */}
+                <ShippingTotal subtotal={subtotal} />
+                <br />
+                {/*  ----- NEXT/PREV BUTTONS --------- */}
+                <div className="checkout-shipping-action">
+                  <button
+                    className="button button-muted"
+                    onClick={() => history.push(CHECKOUT_STEP_1)}
+                    type="button"
+                  >
+                    <ArrowLeftOutlined />
+                    &nbsp;
+                    Go Back
+                  </button>
+                  <button
+                    className="button button-icon"
+                    type="submit"
+                  >
+                    Next Step
+                    &nbsp;
+                    <ArrowRightOutlined />
+                  </button>
+                </div>
+              </Form>
+            )}
+          </Formik>
         </div>
       </div>
     </Boundary>
