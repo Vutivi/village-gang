@@ -32,7 +32,7 @@ const Payment = ({ shipping, payment, subtotal, basket, profile }) => {
     }).then((response) => {
       console.log(response);
 
-      window.location = `https://www.payfast.co.za/eng/process?cmd=_paynow&receiver=25266561&item_name=${response}&item_description=Village+Gang+Order&amount=${subtotal.toFixed(0)}&return_url=http://localhost:3000/account&cancel_url=http://localhost:3000`;
+      window.location = `https://www.payfast.co.za/eng/process?cmd=_paynow&receiver=25266561&item_name=${profile.mobile}&item_description=Village+Gang+Order&amount=${subtotal.toFixed(0)}&return_url=https://master--village-gang.netlify.app/account&cancel_url=https://master--village-gang.netlify.app`;
     })
   };
 
