@@ -49,7 +49,10 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
     email: shipping.email || profile.email || '',
     address: shipping.address || profile.address || '',
     mobile: shipping.mobile || profile.mobile || {
-      value: '27112121211'
+      country: 'South Africa',
+      countryCode: '27',
+      dialCode: '27',
+      value: '27659105903'
     },
     isInternational: shipping.isInternational || false,
     isDone: shipping.isDone || false
