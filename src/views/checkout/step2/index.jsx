@@ -45,12 +45,12 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
   const history = useHistory();
 
   const initFormikValues = {
-    fullname: '',
-    email: '',
-    address: '',
-    mobile: {},
-    isInternational: false,
-    isDone: false
+    fullname: shipping.fullname || profile.fullname || '',
+    email: shipping.email || profile.email || '',
+    address: shipping.address || profile.address || '',
+    mobile: shipping.mobile || profile.mobile || {},
+    isInternational: shipping.isInternational || false,
+    isDone: shipping.isDone || false
   };
 
   const onSubmitForm = (form) => {
@@ -73,7 +73,6 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
         <div className="checkout-step-2">
           <h3 className="text-center">Shipping Details</h3>
           <Formik
-            initialValues={initFormikValues}
             validateOnChange
             validationSchema={FormSchema}
             onSubmit={onSubmitForm}
