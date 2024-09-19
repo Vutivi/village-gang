@@ -38,7 +38,7 @@ const OrderSummary = ({ basket, subtotal }) => {
         <br />
         <div className="basket-total text-right">
           <p className="basket-total-title">Subtotal:</p>
-          <h2 className="basket-total-amount">{displayMoney(subtotal.toFixed(0))}</h2>
+          <h2 className="basket-total-amount">{displayMoney(subtotal)}</h2>
         </div>
         <br />
         <div className="checkout-shipping-action">
