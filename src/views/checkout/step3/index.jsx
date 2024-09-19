@@ -27,7 +27,7 @@ const Payment = ({ shipping, payment, subtotal, basket, profile }) => {
       userId: firebase.auth.currentUser.uid,
       user: profile,
       isInternational: shipping.isInternational,
-      subtotal: `${subtotal}`,
+      subtotal: `${subtotal.toFixed(0)}`,
       status: 'created'
     }).then((response) => {
       window.location = `https://www.payfast.co.za/eng/process?cmd=_paynow&receiver=25266561&item_name=Village Gang Order&item_description=Village+Gang+Order&amount=${subtotal.toFixed(2)}&return_url=https://master--village-gang.netlify.app/account&cancel_url=https://master--village-gang.netlify.app`;
