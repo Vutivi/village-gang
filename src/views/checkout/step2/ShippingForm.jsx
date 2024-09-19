@@ -39,9 +39,9 @@ const ShippingForm = () => {
               component={CustomInput}
             />
           </div>
-          {/* <div className="d-block checkout-field">
+          <div className="d-block checkout-field">
             <CustomMobileInput name="mobile" defaultValue={values.mobile} />
-          </div> */}
+          </div>
         </div>
         <div className="checkout-fieldset">
           <Field name="isInternational">

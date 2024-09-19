@@ -48,7 +48,12 @@ const ShippingDetails = ({ profile, shipping, subtotal }) => {
     fullname: shipping.fullname || profile.fullname || '',
     email: shipping.email || profile.email || '',
     address: shipping.address || profile.address || '',
-    mobile: shipping.mobile || profile.mobile || {},
+    mobile: shipping.mobile || profile.mobile || {
+      dialCode: '',
+      countryCode: '27',
+      country: 'ZA',
+      value: '659105903'
+    },
     isInternational: shipping.isInternational || false,
     isDone: shipping.isDone || false
   };
